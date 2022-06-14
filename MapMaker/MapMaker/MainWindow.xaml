@@ -1,0 +1,87 @@
+﻿<Window x:Class="MapMaker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MapMaker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="900">
+    
+    
+    <Canvas>
+        
+
+
+        <TextBlock Text="Map Maker" FontSize="20"/>
+
+        <Button Content="Walls and Floor" Canvas.Left="10" Canvas.Top="34"/>
+        <Button Content="Enemies and Objects" Canvas.Left="10" Canvas.Top="54"/>
+        <Button Content="Save Map" Canvas.Left="100" Canvas.Top="34" Click="saveRoom"/>
+        <Button Content="Import Map" Canvas.Left="160" Canvas.Top="34" />
+
+        <Canvas Name="Menu" Width="285" Height="440" Canvas.Left="15" Canvas.Top="89">
+            <TextBlock Text="Walls and Floors" />
+            <Button Content="grass" Width="200" Canvas.Top="20" Click="Button_Click"  />
+            <Button Content="dirt" Width="200" Canvas.Top="40" Click="Button_Click" />
+            <Button Content="wall" Width="200" Canvas.Top="60" Click="Button_Click" />
+            <Button Content="wood" Width="100" Canvas.Top="80" Click="Button_Click" />
+            <Button Content="water" Width="100" Canvas.Top="80"  Canvas.Left="100" Click="Button_Click" />
+
+        </Canvas>
+
+        <Canvas Name="Menu2" Width="285" Height="440" Canvas.Left="15" Canvas.Top="209">
+            <TextBlock Text="Objects" />
+            <Button Content="enemy" Width="100" Canvas.Top="20" Click="Button_Click_2" Background="Red" />
+            <Button Content="circle" Width="100" Canvas.Top="20" Canvas.Left="100" Click="Button_Click_2" Background="Blue" />
+            <Button Content="coin" Width="100" Canvas.Top="40" Click="Button_Click_2" />
+            <Button Content="shooter" Width="100" Canvas.Top="40" Canvas.Left="100" Click="Button_Click_2" Background="Red"/>
+            <Button Content="ammo" Width="100" Canvas.Top="60" Click="Button_Click_2" />
+            <Button Content="statue" Width="100" Canvas.Top="60" Canvas.Left="100" Click="Button_Click_2" />
+            <Button Content="bomb" Width="100" Canvas.Top="80" Click="Button_Click_2" />
+            <Button Content="table" Width="100" Canvas.Top="80" Canvas.Left="100" Click="Button_Click_2" />
+            <Button Content="key" Width="100" Canvas.Top="100" Click="Button_Click_2" />
+            <Button Content="chair" Width="100" Canvas.Top="100" Canvas.Left="100" Click="Button_Click_2" />
+            <Button Content="holy_cross" Width="100" Canvas.Top="120" Click="Button_Click_2" />
+            <Button Content="frog" Width="100" Canvas.Top="120" Canvas.Left="100" Click="Button_Click_2" Background="Red"/>
+            <Button Content="random" Width="100" Canvas.Top="140" Click="Button_Click_2" />
+            <Button Content="fireball" Width="100" Canvas.Top="140" Canvas.Left="100" Click="Button_Click_2" Background="Red"/>
+            <Button Content="crate" Width="100" Canvas.Top="160" Click="Button_Click_2" />
+            <Button Content="Eye" Width="100" Canvas.Top="160" Canvas.Left="100" Click="Button_Click_2" Background="Red"/>
+            <Button Content="crate2" Width="100" Canvas.Top="180" Click="Button_Click_2" />
+            <Button Content="soldier" Width="100" Canvas.Top="180" Canvas.Left="100" Click="Button_Click_2" Background="Red"/>
+            <Button Content="crate3" Width="100" Canvas.Top="200" Click="Button_Click_2" />
+            <Button Content="slime" Width="100" Canvas.Top="200" Canvas.Left="100" Click="Button_Click_2" Background="Red"/>
+            <Button Content="fakewall" Width="100" Canvas.Top="220" Click="Button_Click_2" />
+            <Button Content="doorup" Width="100" Canvas.Top="240" Click="Button_Click_2" />
+            <Button Content="doorside" Width="100" Canvas.Top="260" Click="Button_Click_2" />
+            <Button Content="exit" Width="100" Canvas.Top="280" Click="Button_Click_2" />
+
+
+
+        </Canvas>
+
+
+
+        <TextBlock Width="285" Height="25" Canvas.Left="10" Canvas.Top="524" Text="Get Room:"/>
+        <TextBox x:Name="GetMap" Width="205" Height="25" Canvas.Left="10" Canvas.Top="549" Text="0"/>
+        <Button Name="NewRoomButton" Content="New Room" Width="115" Height="25" Canvas.Left="100" Canvas.Top="549" Click="NewRoomButton_Click"/>
+
+
+        <TextBox x:Name="RoomType" Width="205" Height="25" Canvas.Left="225" Canvas.Top="549" Text="0"/>
+
+
+        <Canvas Name="PlayerSpace" Width="500" Height="499" Canvas.Top="35" Canvas.Left="320" MouseDown="PlayerSpace_MouseLeftButtonDown" Visibility="Visible">
+        </Canvas>
+
+        <Canvas Name="ObjectSpace" Width="500" Height="499" Canvas.Top="35" Canvas.Left="320" MouseDown="PlayerSpace_MouseLeftButtonDown" Visibility="Hidden">
+        </Canvas>
+
+        <Canvas Name="LoadingCanvas" Visibility="Visible">
+            <Rectangle Height="600" Width="900" Fill="White"/>
+            <TextBlock Text="Load File" />
+            <TextBox Canvas.Top="20" Width="200" Height="20" Name="InputMap" Text="tutorial"/>
+            <Button Content="Load" Canvas.Top="50" Click="ButtonLoad" />
+        </Canvas>
+
+    </Canvas>
+</Window>

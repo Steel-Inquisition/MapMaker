@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "63d6af86-7ff2-4be8-bcfa-0d0e7b7fb800": {
+      "ProjectGuid": "63d6af86-7ff2-4be8-bcfa-0d0e7b7fb800",
+      "DisplayName": "MapMaker",
+      "ColorIndex": 0
+    },
+    "96a9feeb-017a-4c1b-8437-9639dd80dc5b": {
+      "ProjectGuid": "96a9feeb-017a-4c1b-8437-9639dd80dc5b",
+      "DisplayName": "Actual_Dream_Game",
+      "ColorIndex": 1
+    },
+    "87f22b94-dc16-4486-98ab-b5fd1234c902": {
+      "ProjectGuid": "87f22b94-dc16-4486-98ab-b5fd1234c902",
+      "DisplayName": "Start_Game",
+      "ColorIndex": 2
+    },
+    "9587a25b-c53d-4020-b2ed-f1cadaa3e753": {
+      "ProjectGuid": "9587a25b-c53d-4020-b2ed-f1cadaa3e753",
+      "DisplayName": "Actual_Dream_Game",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}
